@@ -1,0 +1,11 @@
+{
+    "presets": [
+        ["env", {
+            "targets": {
+                "ie": 9
+            }
+        }]
+    ],
+    "comments": false,
+    "plugins": ["transform-object-assign"]
+}
