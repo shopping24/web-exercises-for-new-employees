@@ -9,20 +9,53 @@ class CollectionMacrosTest extends TestCase
 {
     public function testCountBy()
     {
-        $actual = collect([
-            ['role' => 'admin'],
-            ['role' => 'customer'],
-            ['role' => 'admin'],
-            ['role' => 'customer'],
-            ['role' => 'admin'],
-            ['role' => 'customer'],
-            ['role' => 'customer'],
-            ['role' => 'admin'],
-            ['role' => 'customer']
-        ])->countBy('role')->toArray();
+        $users = collect([
+            [
+                'name' => 'Alice',
+                'role' => 'admin'
+            ],
+            [
+                'name' => 'Bob',
+                'role' => 'customer'
+            ],
+            [
+                'name' => 'Charlie',
+                'role' => 'admin'
+            ],
+            [
+                'name' => 'Bob',
+                'role' => 'customer'
+            ],
+            [
+                'name' => 'Alice',
+                'role' => 'admin'
+            ],
+            [
+                'name' => 'Alice',
+                'role' => 'customer'
+            ],
+            [
+                'name' => 'Charlie',
+                'role' => 'customer'
+            ],
+            [
+                'name' => 'Bob',
+                'role' => 'admin'
+            ],
+            [
+                'name' => 'Alice',
+                'role' => 'customer'
+            ]
+        ]);
 
-        $expected = ['admin' => 4, 'customer' => 5];
+        $this->assertEquals(
+            ['admin' => 4, 'customer' => 5],
+            $users->countBy('role')->toArray()
+        );
 
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals(
+            ['Alice' => 4, 'Bob' => 3, 'Charlie' => 2],
+            $users->countBy('name')->toArray()
+        );
     }
 }
