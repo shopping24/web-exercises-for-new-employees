@@ -33,17 +33,6 @@ $ npm run mocha
 
 ### PHP
 
-#### Extend Collection Class with a `countBy` method
-Implement a `countBy` method to Laravel's Collection Class
-via a macro in the `App\Providers\CollectionMacrosServiceProvider`.
-
-Validate your the implementation with help of `Tests\Unit\CollectionMacrosTest`.
-
-Useful resources:
-- https://laravel.com/docs/5.7/providers
-- https://laravel.com/docs/5.7/collections#extending-collections
-
-
 #### FizzBuzz
 
 ##### Implement the methods
@@ -57,6 +46,16 @@ but each time a number is dividable
 - by both 3 and 5, you say "FizzBuzz"
 
 Validate your the implementation with help of `Tests\Unit\FizzBuzzTest`.
+
+#### Extend Collection Class with a `countBy` method
+Implement a `countBy` method to Laravel's Collection Class
+via a macro in the `App\Providers\CollectionMacrosServiceProvider`.
+
+Validate your implementation with help of `Tests\Unit\CollectionMacrosTest`.
+
+Useful resources:
+- https://laravel.com/docs/5.7/providers
+- https://laravel.com/docs/5.7/collections#extending-collections
 
 ##### REST API
 To create a simple public REST API add a controller and its routes.  
