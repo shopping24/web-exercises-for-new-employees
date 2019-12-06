@@ -7,7 +7,7 @@ Welcome! This project contains some challenges for testing the skills of develop
 ### Clone the git repository to your machine
 
 ```bash
-$ git clone git@github.com:shopping24/s24-trial-works.git
+$ git clone git@github.com:shopping24/web-exercises-for-new-employees.git
 ```
 
 ### Install dependencies
